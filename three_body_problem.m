@@ -2,6 +2,7 @@
 m1=rand() *10^23;
 m2=rand() *10^23;
 m3=rand() *10^23;
+colordef black
 
 pos1=[rand() *10^7,rand() *10^7,rand() *10^7];
 pos2=[rand() *10^7,rand() *10^7,rand() *10^7];
@@ -13,9 +14,7 @@ v3=[rand() *10^3,rand() *10^3,rand() *10^3];
 
 G=6.67*10^-11;
 dt=0.1;
-%  main
 figure
-colordef black
 grid on 
 axis equal
 view(3)
@@ -63,7 +62,7 @@ while true
     v3=v3+a3*dt;
     
     frame=frame+1;
-    if frame==1000
+    if frame==100
         frame=0;
         
         set(planet1,'Xdata',pos1(1),'Ydata',pos1(2),'Zdata',pos1(3))
